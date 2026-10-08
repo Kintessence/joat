@@ -1,0 +1,82 @@
+:root {
+    --azul-pmvv: #0057a4;
+    --azul-escuro-pmvv: #06305d;
+    --vermelho-pmvv: #e30421;
+    --cg-max-height-f4: 160px;
+    --cg-f2-width: 325px;
+}
+
+.cg-main-wrapper { display: grid; grid-template-columns: 320px 1fr; gap: 30px; font-family: 'Lato', sans-serif; background: #f4f5f7; padding: 25px; border-radius: 12px; color: #333; }
+.cg-sidebar { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.cg-sidebar h3 { margin-top: 0; font-size: 18px; color: #1e1e1e; font-family: 'Qanelas', sans-serif; font-weight: 700; }
+.cg-control-group { margin-bottom: 20px; }
+.cg-control-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 14px; }
+.cg-control-group select, .cg-control-group input[type="text"], .cg-control-group input[type="date"], .cg-control-group input[type="time"], .cg-control-group input[type="range"] { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+
+.cg-btn { width: 100%; padding: 12px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-bottom: 10px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; font-family: 'Qanelas', sans-serif; transition: all 0.2s ease; }
+.cg-btn-save { background: #007cba; color: #fff; }
+.cg-btn-save:hover:not(:disabled) { background: #006699; }
+.cg-btn-generate { background: #46b450; color: #fff; }
+.cg-btn-generate:hover:not(:disabled) { background: #389240; }
+.cg-btn-media { background: #f7f7f7; color: #555; border: 1px solid #ccc; font-size: 13px; padding: 8px; justify-content: flex-start; }
+
+/* Botões Cinzas / Desabilitados */
+.cg-btn.disabled-gray, .cg-btn:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+
+.cg-preview-zone { display: flex; justify-content: center; align-items: center; background: #e0e2e6; padding: 20px; border-radius: 8px; }
+.card-container { width: 405px; height: 720px; position: relative; background: #fff; box-shadow: 0 12px 35px rgba(0,0,0,0.15); overflow: hidden; box-sizing: border-box; }
+
+.card-bg { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; background-repeat: no-repeat !important; z-index: 1 !important; }
+.card-mask { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 2; pointer-events: none; }
+.card-content-flow { position: relative; z-index: 3; height: 100%; display: flex; flex-direction: column; padding: 260px 40px 80px; box-sizing: border-box; }
+
+.field-1, .field-2, .field-3 { text-transform: uppercase; font-family: 'Qanelas', sans-serif !important; }
+.field-1 { text-align: center; font-size: 16px; font-weight: 700; color: var(--vermelho-pmvv); margin-bottom: 0; line-height: 1; letter-spacing: 0.045em; }
+.field-1.convite-definido:before { content: "convite "; }
+
+/* CAMPO 2 - REFATORADO COM EASING SUAVE */
+.field-2 {
+    text-align: center !important;
+    font-weight: 850 !important;
+    color: var(--azul-escuro-pmvv) !important;
+    line-height: 1.1 !important;
+    margin: 4px 0 !important;
+    width: var(--cg-f2-width) !important;
+    max-width: var(--cg-f2-width) !important;
+    box-sizing: border-box;
+    outline: none;
+    display: block !important;
+    overflow: hidden !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    transition: font-size 0.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.field-3 { text-align: center; font-size: 19px; font-weight: 400; color: #666; margin-bottom: 18px; }
+.field-3.bairro-definido:before { content: "bairro "; }
+
+.field-4 { font-family: 'Lato', sans-serif; font-size: 18px; line-height: 1.075; margin: 0 -39px; padding: 0 36px; color: var(--azul-pmvv); outline: none; text-align: left; max-height: var(--cg-max-height-f4); overflow: hidden; border-left: 4px solid var(--vermelho-pmvv); }
+.field-4 p { margin-top: 0; margin-bottom: 12px; }
+
+.field-5 { font-family: 'Lato', sans-serif; font-size: 18px; color: #333; font-weight: 800; line-height: 1.1; max-width: 100%; display: flex; flex-direction: column; align-items: flex-start; margin: auto; width: fit-content; }
+.field-5-row { color: var(--azul-escuro-pmvv); display: flex; align-items: center; gap: 3px; margin: 1px 0; text-align: left;}
+.field-5-row i { color: var(--vermelho-pmvv); width: 20px; text-align: center; }
+.cg-dia-semana { color: var(--azul-pmvv) !important; margin-left: 2px !important; text-transform: uppercase !important; }
+
+.cg-gestao-container { font-family: 'Lato', sans-serif; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.cg-gestao-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f4f5f7; padding-bottom: 15px; margin-bottom: 25px; }
+.cg-gestao-header h2 { margin: 0; font-family: 'Qanelas', sans-serif; font-weight: 700; color: #06305d; }
+.cg-grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.cg-card-item { background: #f4f5f7; border-radius: 6px; overflow: hidden; border: 1px solid #e0e2e6; display: flex; flex-direction: column; }
+.cg-card-thumb { height: 140px; background-size: cover; background-position: center; background-color: #ddd; }
+.cg-card-meta { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; }
+.cg-card-meta h4 { margin: 0 0 10px 0; font-family: 'Qanelas', sans-serif; font-weight: 700; color: #333; font-size: 14px; }
+.cg-card-actions { display: flex; gap: 8px; margin-top: auto; }
+.cg-btn-action { flex: 1; padding: 8px; border: none; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 4px; }
+.cg-btn-edit { background: #007cba; color: #fff; }
+.cg-btn-add-new { background: #46b450; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 4px; font-weight: bold; font-size: 14px; display: flex; align-items: center; gap: 6px; font-family: 'Qanelas', sans-serif; }

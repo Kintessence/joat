@@ -1,0 +1,32 @@
+.links-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.link-card {
+	flex: 0 1 calc(20% - 1rem);
+	align-content: center;
+	border: 1px solid #ddd;
+	padding: 1rem;
+	border-radius: 6px;
+	background: #fafafa;
+}
+.link-card h3 { margin-top: 0; }
+.link-card p { margin: 0; }
+.link-card .tags {
+	display: block;
+	margin-top: .5rem;
+	color: #666;
+	font-size: .9em;
+}
+.link-search {
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: .5rem;
+}
+@media(max-width:800px){
+	.link-card { flex: 1 1 calc(50% - 1rem); }
+}
+@media(max-width:500px){
+	.link-card { flex: 1 1 100%; }
+}

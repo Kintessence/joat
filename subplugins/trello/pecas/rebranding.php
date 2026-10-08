@@ -1,0 +1,2 @@
+<?php
+// Gerado: rebranding.php
